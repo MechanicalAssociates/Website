@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="JavaScript/testimonies.js"></script>
+    <title>Home | Mechanical Associates</title>
+
+    <!-- CSS stuff -->
+    <link type="text/css" rel="stylesheet" href="MainCSS.css">
+
+     <!-- JavaScript Code -->
+        <script type="text/javascript">
+         $(document).ready(function()
+         {
+             setupRotator();
+         });
+         function setupRotator()
+         {
+             if($('.textItem').length > 1)
+             {
+                 $('.textItem:first').addClass('current').fadeIn(1000);
+                 setInterval('textRotate()', 10000);
+             }
+         }
+             function textRotate()
+             {
+                 var current = $('#quotes > .current');
+                 if(current.next().length == 0)
+                 {
+                     current.removeClass('current').fadeOut(1000);
+                     $('.textItem:first').addClass('current').fadeIn(1000);
+                 }
+                 else
+                 {
+                     current.removeClass('current').fadeOut(1000);
+                     current.next().addClass('current').fadeIn(1000);
+                 }
+             }
+        </script>
+
+
+  </head>
+  <body>
+      <!-- JavaScript Body code -->
+      <div id="fb-root"></div>
+<script>
+  // Facebook JS code
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+  // Testimonial code
+  $('.testimonies div:first').show();
+  setInterval(function(){ $('.testimonies div:first-child').fadeOut().next('div').fadeIn().end().appendTo('.testimonies') },3000);
+    </script>
+
+
+<!-- Start up the actual body stuff cause OH MY GOD ALL THIS CODE -->
+    <section id="header">
+        <div id="header_navigation">
+            <span class="company_logo">
+                <a href="Index.html" title="Mechanical Associates"><img src="PictureRefs/MechanicalAssociates_Logo1.png" height="70px";></img></a>
+            </span>
+            <span class="links">
+                <ul class="actualnavigation">
+                    <a href="Index.html" title="Home" alt="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="AboutUs.html" title="About Us" alt="About Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="Products.html" title="Products" alt="Products">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="TrainingVideos.html" title="Videos" alt="Training Videos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="ContactUs.html" title="Contact Us" alt="Contact Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </ul>
+            </span>
+        </div>
+    </section>
+
+    <section id="main_content">
+        <div id="banner">
+            <img src="PictureRefs/DSC_0016.png"></img>
+        </div>
+        <div id="content">
+          <div id="testimonials">
+              <div id="quotes">
+                <div class="textItem" display="none"><h3>Excellent Customer Service</h3>
+                  <a href="http://aquadyneassociates.com/"><img src="PictureRefs/AquadyneAssociates.png" style="float: right; padding-left: 15px;"></img></a>
+                  <a href="pdfs/LettersOfRecommendation/Aquadyne.pdf"><i>"We like working with Mechanical Associates because they respond quickly and produce a quality product that we have had very few problems with in the last four years. Their entire staff will go the extra distance to make sure the customer is satisfied."</i></a></div>
+                <div class="textItem" display="none"><h3>Customer Focus and Reliability</h3>
+                  <a href="http://www.conteches.com/"><img src="PictureRefs/Contech.png" style="float: right; padding-left: 75px;"></img></a>
+                  <a href="pdfs/LettersOfRecommendation/Contech-Masterson.pdf"><i>"Mechanical Associates responds in a timely manner while attending to the needs of our customers while producing a high quality product. Their entire staff is dedicated to making the best possible gates on the market."</i></a></div>
+                <div class="textItem" display="none"><h3>Customizeable Products</h3>
+                  <a href="http://www.calwaterfowl.org/"><img src="PictureRefs/Birb.png" style="float: right; padding-left: 15px;"></img></a>
+                  <a href="pdfs/LettersOfRecommendation/CalicorniaWaterfowl.pdf"><i>"We appreciate the fact that Mechanical Associates has the ability to customize products for our unique project needs. California Waterfowl has been instrumental in the implementation of Mechanical Associates new products and or designs."</i></a></div>
+                <div class="textItem" display="none" title="A triple 'A' gaming experience"><h3>Always Accommodating and Available</h3>
+                  <a href="http://www.clarkbrosinc.com/"><img src="PictureRefs/ClarkBros.png" style="float: right; padding-left: 15px;"></img></a>
+                  <a href="pdfs/LettersOfRecommendation/ClarkBros.pdf"><i>"From the onset of this relationship, the dedication of the product line by the MA team was quite obvious. Upon receipt and inspection of the gates, they were found to be per specification without flaw. Mechanical Associates has our complete endorsement."</i></a></div>
+                <div class="textItem" display="none"><h3>Producing a High Quality Product</h3>
+                  <a href="https://www.ferguson.com/"><img src="PictureRefs/Ferguson.png" style="float: right; padding-left: 15px; padding-bottom: 50px;"></img></a>
+                  <a href="pdfs/LettersOfRecommendation/Ferguson.pdf"><i>"Mechanical Associates successfully includes specification writing, bidding, submittal packages and finally providing high quality stainless steel fabricated slide gates, stop plates, mudd falves, and other water control elements used in the field."</i></a></div>
+              </div>
+          </div>
+          <div id="mainInfo">
+            <center><img src="MA-Logo-Full_Color.png"></img></center>
+            <hr>
+            <h2><i>Expert control solutions for water flow.</i></h2>
+                Upgrade from traditional cast-iron or steel gates to durable and modern water flow gates made of marine grade aluminum and stainless steel.
+                <ul>
+                    <li>Corrosion-resistant, innovatively designed, quality fabricated mechanical gates</li>
+                    <li>Durable, low maintenance, cost-effective alternatives to steel or cast iron gates</li>
+                    <li>An extensiveproduct range made in the USAat highly competitive prices</li>
+                </ul>
+                        What are the benefits of installing aluminum or stainless steel water flow gates?
+                <ul>
+                    <li>Lightweight yet durable materials make them easy to install and maintain</li>
+                    <li>Innovative design and quality fabrication prevents malfunction and leaks</li>
+                    <li>Quality engineering design ensures less damage due to wear and tear</li>
+                    <li>Long-term savings due to lower repair costs</li>
+                    <li>FREE consultation and technological expertise for installation and repair</li>
+                </ul>
+            <h2><i>Innovative products contribute to sustainable progress.</i></h2>
+                Complementing a standard product range that includes Canal Gates, Slide Gates, Flap Gates and a range of specialty products and accessories, Mechanical Associates also undertakes the manufacture of customized water flow control gates according to the special requirements of clients and projects.
+                <p>
+                Mechanical Associates was formed with a vision to conserve and control one of our most precious resources, water by ensuring safe and efficient distribution to support sustainable agricultural and industrial progress.
+                <p>
+                The company is committed to consistently innovate and continuously improve upon the quality standards, engineering and fabrication prowess of its manufacturing unit in which is strategically located in San Joaquin Valley, in the heart of the most agriculturally productive regions in the world.
+                <p>
+            <h2><i>A proven track record and a diversified product range.</i></h2>
+                Depending on the nature of the projects and its requirements, Mechanical Associates possesses the necessary expertise, qualified personnel, manufacturing capabilities and experience to produce specialty products. Some of the typical water flow applications that the company’s product range caters to include:
+                <ul>
+                    <li>Irrigation and Flood Control Districts</li>
+                    <li>Municipal Water and Waste Water Treatment Plants</li>
+                    <li>Water Storage</li>
+                    <li>Industrial Waste Water</li>
+                    <li>Food Processing / Ag Waster Water Applications</li>
+                    <li>Estuaries</li>
+                </ul>
+            <h2><i>Why Mechanical Associates is considered a leading authority in water control management?</i></h2>
+                Over 20 years of experience manufacturing canal gates, slide gates and flap gates.
+                <p>
+                Experts in municipal and industrial wastewater, agricultural irrigation, water supply and flood water control.
+                <p>
+                Mechanical Associates has been providing quality products and solutions for water control and management to public utilities, municipalities, the farming community and industrial organizations since 1993.
+                <p>
+                As a manufacturer of corrosion resistant water flow control gates, Mechanical Associates has an established track record of catering to the agricultural, irrigation, industrial and municipal requirements for controlling and regulating the flow of water. The company manufactures precision fabricated and innovatively designed mechanical gates that fulfill a variety of water flow control needs.
+            <h2><i>Your reliable source for canal gates, slide gates and flap gates.</i></h2>
+                Quality fabrication and innovative engineering designs distinguish the product range of Mechanical Associates. All products are fabricated using marine grade stainless steel or aluminum which ensures durable, long-lasting service and require low-maintenance. Subject to customized design and fabrication needs, alternative materials such as galvanized A36 steel are also used to reinforce the strength of the product to withstand specific pressures.
+          </div>
+        </div>
+
+        <div id="footer">
+            <span class="footer_links">
+                <ul class="footer_navigation">
+                    <a href="Index.html" title="Home" alt="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="AboutUs.html" title="About Us" alt="About Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="Products.html" title="Products" alt="Products">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="TrainingVideos.html" title="Videos" alt="Training Videos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="ContactUs.html" title="Contact Us" alt="Contact Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </ul>
+            </span>
+            <div id="social_media">
+                <!-- Facebook -->
+                    <div class="fb-like" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677/" data-width="100" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                <!-- Google+ -->
+
+                <!-- Instagram -->
+
+                <!-- LinkedIn -->
+
+                <!-- Twitter -->
+
+                <!-- YouTube -->
+
+            </div>
+            <div id="Logo_Only">
+                <div class="Logo" style="text-align: right; padding-right: 25px;">
+                    <img src="LOGOONLY.png" width="85"; height="50";></img><br/>
+                </div>
+            </div>
+            <div class="copyright" style="text-align: right; width: 100%; margin: auto;">
+                    Copyright &copy; 2013 Mechanical Associates<br/>
+                    All Rights Reserved.
+                </div>
+        </div>
+    </section>
+
+  </body>
+</html>
