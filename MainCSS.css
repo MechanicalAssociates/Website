@@ -1,0 +1,179 @@
+/* MainCSS */
+/* Code by Brenna Picar */
+/* I tried shoving as much understandable comments as I could, so do take to heart to not mess it up, code monkey. */
+
+
+/* Main Structure for page */
+body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-size: 100%;
+
+      background-image: url("Water.png");
+      background-position: bottom center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* ------------------------------- Important Header, Content, and Footer stuff ------------------------------- */
+
+
+
+/* ------------------------------- Start the Header here ------------------------------- */
+/* Header */
+#header {
+      width: 100%;
+      background: #000000;
+      height: 80px;
+      margin: auto;
+}
+
+#header a {
+    text-decoration: none;
+    color:#FFFFFF;
+  }
+
+
+.company_logo {
+      float: left;
+      position: relative;
+      padding-left: 5px;
+      z-index: 20;
+      margin: auto;
+      padding-top: 5px;
+}
+
+.links {
+      /* text-align: center; */
+      position: absolute;
+      margin: auto;
+      height: 80px;
+      padding-top: 15px;
+      z-index: 20;
+}
+
+.links a {
+    position: relative;
+    width: 100px;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    z-index: 21;
+}
+
+.links a:hover {
+    background:#0E7DC2;
+}
+
+.actualnavigation {
+    list-style-type: none;
+}
+
+/* ------------------------------- Start the Main Content here ------------------------------- */
+/* Main Content */
+#main_content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+}
+
+#banner {
+      max-height: 100%;
+      text-align: center;
+      padding-right: 50px;
+}
+
+#content {
+      background-color: #FFFFFF;
+      margin: auto;
+      width: 70%;
+      border-radius: 10px;
+      padding-top: 25px;
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-bottom: 75px;
+}
+li {
+  list-style-position: inside;
+}
+
+ #testimonials
+ {
+   margin: auto;
+   font-size:20px;
+   position:relative;
+ }
+
+#quotes {
+   height: 265px;
+   width: 100%;
+}
+
+.textItem
+ {
+   position:absolute;
+   display:none;
+   height: auto;
+ }
+
+.textItem a {
+   text-decoration: none;
+   color: #0E7DC2;
+}
+
+.popup_div {
+    position: absolute;
+    display: none;
+    background: #ccc;
+    border: 1px solid;
+}
+
+/* ---------------------------------  Map Stuff --------------------------------- */
+
+
+
+/* ------------------------------- Start the Footer here ------------------------------- */
+/* Footer */
+#footer {
+      float: right;
+      width: 100%;
+      padding-top: 5px;
+      padding-left: 10px;
+      background: #000000;
+      /* text-align: center; */
+      color: #FFFFFF;
+      margin-top: 10px;
+}
+
+#footer a {
+    text-decoration: none;
+    color:#FFFFFF;
+ }
+
+#social_media {
+    float: left;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 50%;
+    Height: auto;
+}
+
+#Logo_Only {
+    float: right;
+    position: relative;
+    margin: auto;
+    padding-left: 10px;
+    width: 100px;
+}
+
+.Logo {
+    float: right;
+    width: 200px;
+}
