@@ -12,7 +12,7 @@ body {
       overflow-x: hidden;
       font-size: 100%;
 
-      background-image: url("Water.png");
+      background-image: url("PictureRefs/Water.png");
       background-position: bottom center;
       background-attachment: fixed;
       background-repeat: no-repeat;
