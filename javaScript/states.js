@@ -189,7 +189,7 @@ $(function() {
 });
 
 
-$(function() {
+/* $(function() {
   $('#Idaho').qtip({ // Grab some elements to apply the tooltip to
                 content: {
                   text: '<b>Company Name</b><br/>' + 'email: <i>example@email.com</i><br/>' + 'phone: <i>1(800)EXAMPLE</i>',
@@ -201,7 +201,7 @@ $(function() {
                 }
 
   });
-});
+}); */
 
 $(function() {
   $('#NorIdaho').qtip({ // Grab some elements to apply the tooltip to
