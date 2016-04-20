@@ -1,0 +1,96 @@
+/* Main Mobile CSS */
+/* Code by Brenna Picar */
+/* I tried shoving as much understandable comments as I could, so do take to heart to not mess it up */
+
+
+/* Main Structure for page */
+body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-size: 100%;
+
+      background-position: bottom center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* ------------------------------- Important Header, Content, and Footer stuff ------------------------------- */
+
+
+
+/* ------------------------------- Start the Header here ------------------------------- */
+/* Header */
+#header {
+      width: 100%;
+      background: #000000;
+      margin: auto;
+      height: 60px;
+}
+
+.company_logo {
+      float: left;
+      position: relative;
+      padding-left: 5px;
+      z-index: 20;
+      margin: auto;
+      padding-top: 15px;
+      height: 30px;
+}
+
+/* ------------------------------- Start the Main Content here ------------------------------- */
+/* Main Content */
+#mobile_navigation {
+      width: 100%;
+      background: #0E7DC2;
+      text-align: center;
+}
+
+.mobileLink a {
+      text-decoration: none;
+      color: #FFFFFF;
+}
+
+#banner {
+      max-height: 100%;
+      text-align: center;
+}
+
+#mainInfo {
+      margin: auto;
+      width: 90%;
+}
+
+#mainInfo img {
+      width: 100%;
+}
+
+#mainInfo h2 {
+      text-align: center;
+}
+
+/* ------------------------------- Start the Footer here ------------------------------- */
+
+#footer {
+      float: right;
+      width: 100%;
+      padding-top: 5px;
+      padding-left: 10px;
+      background: #051729;
+      /* text-align: center; */
+      color: #FFFFFF;
+      margin-top: 10px;
+}
+
+#social_media {
+    float: left;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 50%;
+    Height: auto;
+}
