@@ -97,21 +97,6 @@ body {
       padding-bottom: 25px;
 }
 
-#content_mini {
-      background-color: #FFFFFF;
-      margin: auto;
-      width: 30%;
-      border-radius: 10px;
-
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding-top: 10px;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-bottom: 5px;
-
-      text-align: center;
-}
 li {
   list-style-position: inside;
 }
