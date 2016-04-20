@@ -101,6 +101,20 @@ li {
   list-style-position: inside;
 }
 
+#content_mini {
+      background-color: #FFFFFF;
+      margin: auto;
+      width: 50%;
+      border-radius: 10px;
+      padding-top: 10px;
+      padding-left: 25px;
+      padding-right: 45px;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+}
+
  #testimonials
  {
    margin: auto;
