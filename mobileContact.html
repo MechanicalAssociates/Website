@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+
+    <!-- CSS stuff -->
+    <link type="text/css" rel="stylesheet" href="mainMobileCSS.css">
+  </head>
+  <body>
+    <div data-role="page">
+
+      <div data-role="header" id="header">
+          <img class="company_logo" src="PictureRefs/MechanicalAssociates_Logo1.png"/>
+      </div>
+
+      <div data-role="main" class="ui-content" id="ui-content">
+      <div id="mobile_navigation">
+        <span class="links">
+          <div class="mobileLink" style="border-top: 2px solid #051729; border-bottom: 1px solid #051729;"><a href="index.html" title="Home" alt="Home">Home</a></div>
+          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="AboutUs.html" title="About Us" alt="About Us">About Us</a></div>
+          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="Products.html" title="Products" alt="Products">Products</a></div>
+          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="TrainingVideos.html" title="Videos" alt="Training Videos">Videos</a></div>
+          <div class="mobileLink" style="border-bottom: 2px solid #051729;"><a href="ContactUs.html" title="Contact Us" alt="Contact Us">Contact Us</a></div>
+        </span>
+      </div>
+      <div id="mainInfo">
+            <h2>Contact Us</h2>
+            <hr>
+                <div id="ContactForm">
+            <form style="float: left; padding-left: 45px; margin: auto; padding-right: 175px;">
+              <p>Full Name<br/>
+              <input type="text" size="10"></input><p>
+              Email Address:<br/>
+              <input type="text" size="10"></input><p>
+              Feedback (Comments, Questions, etc.):<br/>
+              <textarea name="comments" rows="5" cols="20"></textarea><p>
+              <button type="submit" value="Submit" onclick="mailto:blppicar@yahoo.com">Submit</button><p></p>
+            </form>
+          </div>
+          <div style="text-align: left;">
+            <hr>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px;"></img><p>
+              <b>Mechanical Associates</b><br/>
+              745 Broadway Street<br/>
+              Fresno, CA 93721<br/>
+              <i>phone: 559-272-8157</i><br/>
+              <i>email: sales@mechanical-associates.com</i><p>
+            </div>
+          </div>
+      </div>
+
+      <div data-role="footer" id="footer" data-position="fixed">
+         <h3>
+           Follow Mechanical Associates<p>
+           <div class="Logo"><a href="https://www.facebook.com/Mechanical-Associates-818192508251677/"><img src="PictureRefs/Facebook.png" width="50"; height="50";></img></a><br/>
+                </div>
+           </p>
+        </h3>
+      </div>
+
+    </div>
+  </body>
+</html>
