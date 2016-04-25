@@ -1,3 +1,56 @@
+<?php
+  $PHP_SELF = $_SERVER['ContactUs.html'];
+  $errFullName = "";
+  $errEmail = "";
+  $errFeedback = "";
+
+  if (isset($_POST['submit'])) {
+    if($_POST["Alavar"]=="login") {
+
+      $FORMOK = TRUE; // $FORMOK acts as a flag. If you enter any of the conditionals below,
+							        // it gets set to FALSE, and the e-mail will not be sent.
+
+      // Full Name
+      if(preg_match("/^[a-zA-Z -]+$/", $_POST["full_name"]) ===0) {
+        $errFullName = '<div class="errtext">Please enter your name.</div>';
+        $FORMOK = FALSE;
+      }
+
+      // Email
+      if(preg_match("/^[a-zA-Z]\w+(\. \w+)*\@\w+(\.[0-9a-zA-Z]+)*\.[a-zA-Z]{2,4}$/", $_POST["email"]) === 0) {
+        $errEmail = '<div class="errtext">Please enter a vaild email.</div>';
+        $FORMOK = FALSE;
+      }
+
+      // Feedback Area
+      if(preg_match("/^[a-zA-Z -]+$/", $_POST["comments"]) === 0){
+        $errMessage = '<div class="errtext">Please enter your feedback.</div>';
+        $FORMOK = FALSE;
+      }
+
+      if($FORMOK) {
+        $to = "bpicar@mechanical-associates.com";
+        $subject = "Feedback"
+        $full_name_field = $_POST['full_name'];
+        $email_field = $_POST['email'];
+        $message = $_POST['comments'];
+
+        $message = "
+        Name: $full_name_field
+        Email: $email_field
+        Message: $message";
+
+        $headers = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+        // Mail it
+        mail($to, $subject, $message, $headers);
+      } else {
+        echo "Error!";
+      }
+    }
+  }
+
 <!DOCTYPE html>
 <html lang=en>
   <head>
@@ -213,3 +266,4 @@
 
   </body>
 </html>
+
