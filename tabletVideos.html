@@ -7,40 +7,41 @@
     <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
     <!-- CSS stuff -->
-    <link type="text/css" rel="stylesheet" href="mainMobileCSS.css">
+    <link type="text/css" rel="stylesheet" href="mainTabletCSS.css">
 
     <!-- Mobile-to-Website Code Stuff -->
         <script type="text/javascript">
           <!--
-               if (screen.width >= 700 && screen.width <= 1074) {
-              document.location = "tabletVideos.html";
-              } else if (screen.width >= 1075) {
+               if (screen.width >= 1075) {
               document.location = "TrainingVideos.html";
+              } else if (screen.width <= 699) {
+              document.location = "mobileVideo.html";
               }
               //-->
         </script>
+
   </head>
   <body>
     <div data-role="page">
 
       <div data-role="header" id="header">
-          <img class="company_logo" src="PictureRefs/MechanicalAssociates_Logo.png"/>
+          <a href="index.html" title="Mechanical Associates"><img src="PictureRefs/MechanicalAssociates_Logo.png" style="height:70px; padding-top: 10px; padding-left: 10px;"/></a><hr>
+        <div class="links">
+                <ul class="actualnavigation">
+                    <a href="index.html" title="Home" alt="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="AboutUs.html" title="About Us" alt="About Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="Products.html" title="Products" alt="Products">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="TrainingVideos.html" title="Videos" alt="Training Videos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="ContactUs.html" title="Contact Us" alt="Contact Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </ul>
+            </div>
       </div>
 
       <div data-role="main" class="ui-content" id="ui-content">
-      <div id="mobile_navigation">
-        <span class="links">
-          <div class="mobileLink" style="border-top: 2px solid #051729; border-bottom: 1px solid #051729;"><a href="index.html" title="Home" alt="Home">Home</a></div>
-          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="AboutUs.html" title="About Us" alt="About Us">About Us</a></div>
-          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="Products.html" title="Products" alt="Products">Products</a></div>
-          <div class="mobileLink" style="border-bottom: 1px solid #051729;"><a href="TrainingVideos.html" title="Videos" alt="Training Videos">Videos</a></div>
-          <div class="mobileLink" style="border-bottom: 2px solid #051729;"><a href="ContactUs.html" title="Contact Us" alt="Contact Us">Contact Us</a></div>
-        </span>
-      </div>
-      <div id="mainInfo">
-        <div id="banner">
-            <img src="PictureRefs/WorkFloor2.png"></img>
+      <div id="banner">
+            <img src="PictureRefs/Overhead2.png"></img>
         </div>
+        <div id="content">
            <h2>Training Videos</h2>
             <hr>
               <h3>How to change the seal on UHO-12 Canal Gate &#45; Part 1</h3>
@@ -59,7 +60,9 @@
                 <p>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/NczUeQ0cXa8" frameborder="0" allowfullscreen></iframe>
                 <p>
+        </div>
       </div>
+
       <div data-role="footer" id="footer" data-position="fixed">
          <h3>
            Follow Mechanical Associates<p>
