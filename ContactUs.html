@@ -22,6 +22,24 @@
             document.location = "tabletContact.html";
           }
           //-->
+
+          // Twitter things
+          window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+              t._e.push(f);
+            };
+
+            return t;
+          }(document, "script", "twitter-wjs"));
     </script>
   </head>
   <body>
@@ -52,16 +70,20 @@
             </span>
         </div>
     </section>
-
-    <section id="main_content">
-        <div id="banner">
+    <div id="banner">
             <img src="PictureRefs/Overhead.png"></img>
-        </div>
-        <div id="content" style="position: relative; height: 350px;">
+    </div>
+    <section id="main_content">
+      <div class="social_feed">
+            <a class="twitter-timeline"  href="https://twitter.com/MechAssociates" data-widget-id="725324857672486912">Tweets by @MechAssociates</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <div class="fb-page" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+        <div class="content" style="position: relative; height: 350px;">
             <h1>Contact Us</h1>
             <hr>
             <div style="text-align: center; position: relative; margin: auto; border-left: 100px; padding-top: 50px;">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px;"></img><p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px; padding-right: 85px;"></img><p>
               <b>Mechanical Associates</b><br/>
               745 Broadway Street<br/>
               Fresno, CA 93721<br/>
@@ -101,14 +123,14 @@
 
             </form>
           </div> -->
-
-        </div>
         <div id="content_mini" style="position: relative; height: 50px;">
             <p>
               <b>Or contact your local representative!</b>
             </p>
         </div>
-         <div style="width: 70%; background-color: rgba(5, 23, 41, 0.7); border-radius: 10px; position: relative; padding-top: 10px; padding-left: 45px; padding-right: 45px; padding-bottom: 5px; margin: auto;">
+      </div>
+
+         <div class="content" style="background-color: rgba(53, 87, 109, 0.7);">
              <center><img src="PictureRefs/UnitedStates.gif" width="718" height="539" id="map" alt="Mechanical Associates Representative Map" usemap="#USA"></img></center>
          </div>
          <div>
@@ -197,7 +219,8 @@
                 <!-- LinkedIn -->
 
                 <!-- Twitter -->
-
+                    <a href="https://twitter.com/MechAssociates" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @MechAssociates</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 <!-- YouTube -->
 
             </div>

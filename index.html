@@ -46,6 +46,24 @@
             document.location = "tabletIndex.html";
           }
           //-->
+
+          // Twitter things
+          window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+              t._e.push(f);
+            };
+
+            return t;
+          }(document, "script", "twitter-wjs"));
         </script>
 
 
@@ -61,17 +79,25 @@
   js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
+  }(document, 'script', 'facebook-jssdk'));
 
   // Testimonial code
   $('.testimonies div:first').show();
   setInterval(function(){ $('.testimonies div:first-child').fadeOut().next('div').fadeIn().end().appendTo('.testimonies') },3000);
-    </script>
+
+  // Facebook feed
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 
 <!-- Start up the actual body stuff cause OH MY GOD ALL THIS CODE -->
-    <section id="header">
+  <div id="container">
+    <div id="header">
         <div id="header_navigation">
             <span class="company_logo">
                 <a href="index.html" title="Mechanical Associates"><img src="PictureRefs/MechanicalAssociates_Logo.png" height="70px";/></a>
@@ -86,13 +112,17 @@
                 </ul>
             </span>
         </div>
-    </section>
-
-    <section id="main_content">
-        <div id="banner">
-          <center><img src="PictureRefs/Welcome.png"/></center>
-        </div>
-        <div id="content" >
+    </div>
+    <div id="banner">
+       <center><img src="PictureRefs/Welcome.png"/></center>
+    </div>
+    <div id="main_content">
+      <div class="social_feed">
+            <a class="twitter-timeline"  href="https://twitter.com/MechAssociates" data-widget-id="725324857672486912">Tweets by @MechAssociates</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <div class="fb-page" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+        <div class="content" >
           <div id="testimonials">
               <div id="quotes">
                 <div class="textItem" display="none"><h3>Customer Focus and Reliability</h3>
@@ -156,7 +186,6 @@
                 Quality fabrication and innovative engineering designs distinguish the product range of Mechanical Associates. All products are fabricated using marine grade stainless steel or aluminum which ensures durable, long-lasting service and require low-maintenance. Subject to customized design and fabrication needs, alternative materials such as galvanized A36 steel are also used to reinforce the strength of the product to withstand specific pressures.
           </div>
         </div>
-
         <div id="footer">
             <span class="footer_links">
                 <ul class="footer_navigation">
@@ -177,7 +206,8 @@
                 <!-- LinkedIn -->
 
                 <!-- Twitter -->
-
+                    <a href="https://twitter.com/MechAssociates" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @MechAssociates</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 <!-- YouTube -->
 
             </div>
@@ -189,9 +219,9 @@
             <div class="copyright" style="text-align: right; width: 100%; margin: auto;">
                     Copyright &copy; 2013 Mechanical Associates<br/>
                     All Rights Reserved.
-                </div>
+            </div>
         </div>
-    </section>
-
+      </div>
+    </div>
   </body>
 </html>

@@ -4,11 +4,12 @@
 
 
 /* Main Structure for page */
-body {
+html, body {
       height: 100%;
       width: 100%;
       margin: 0;
       padding: 0;
+      padding-bottom: 100px;
       overflow-x: hidden;
       font-size: 100%;
 
@@ -29,6 +30,10 @@ body {
       background: #000000;
       height: 80px;
       margin: auto;
+      clear: both;
+      position: fixed;
+      z-index: 50;
+      padding-bottom: 2px;
 }
 
 #header a {
@@ -51,7 +56,7 @@ body {
       position: absolute;
       margin: auto;
       height: 80px;
-      padding-top: 15px;
+      padding-top: 17px;
       z-index: 20;
 }
 
@@ -74,6 +79,18 @@ body {
 }
 
 /* ------------------------------- Start the Main Content here ------------------------------- */
+/* Social Stuff */
+.social_feed {
+      margin: auto;
+      float: right;
+      width: 400px;
+      height: 100%;
+      margin-right: 15px;
+      margin-left: 20px;
+      display: inline-block;
+      position: relative;
+}
+
 /* Main Content */
 #main_content {
       width: 100%;
@@ -84,6 +101,7 @@ body {
 #banner {
       width: 100%;
       max-height: 100%;
+      padding-top: 80px;
       margin: auto;
 }
 
@@ -91,15 +109,18 @@ body {
       width: 100%;
 }
 
-#content {
+.content {
       background-color: #FFFFFF;
-      margin: auto;
-      width: 50%;
-      border-radius: 10px;
+      width: 67%;
+      margin-left: 70px;
+      border-radius: 5px;
       padding-top: 25px;
       padding-left: 45px;
       padding-right: 45px;
-      padding-bottom: 25px;
+      padding-bottom: 35px;
+      margin-bottom: 5px;
+      position: relative;
+      height: auto;
 }
 
 li {
@@ -107,16 +128,15 @@ li {
 }
 
 #content_mini {
-      background-color: #FFFFFF;
       margin: auto;
-      width: 50%;
-      border-radius: 10px;
+      width: 67%;
+      border-radius: 5px;
       padding-top: 10px;
       padding-left: 25px;
       padding-right: 45px;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
       margin-top: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-align: center;
 }
 

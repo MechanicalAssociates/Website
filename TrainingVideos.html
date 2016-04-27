@@ -19,6 +19,24 @@
             document.location = "tabletVideos.html";
           }
           //-->
+
+      // Twitter things
+          window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+
+            t._e = [];
+            t.ready = function(f) {
+              t._e.push(f);
+            };
+
+            return t;
+          }(document, "script", "twitter-wjs"));
     </script>
 
       <!-- Facebook -->
@@ -49,12 +67,16 @@
             </span>
         </div>
     </section>
-
-    <section id="main_content">
-        <div id="banner">
+      <div id="banner">
             <img src="PictureRefs/WorkFloor2.png"></img>
         </div>
-        <div id="content" style="text-align: center";>
+    <section id="main_content">
+      <div class="social_feed">
+            <a class="twitter-timeline"  href="https://twitter.com/MechAssociates" data-widget-id="725324857672486912">Tweets by @MechAssociates</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <div class="fb-page" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+      </div>
+        <div class="content" style="text-align: center";>
             <h1 style="text-align: left";>Training Videos</h1>
             <hr>
               <h2>How to change the seal on UHO-12 Canal Gate &#45; Part 1</h2>
@@ -94,7 +116,8 @@
                 <!-- LinkedIn -->
 
                 <!-- Twitter -->
-
+                    <a href="https://twitter.com/MechAssociates" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @MechAssociates</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 <!-- YouTube -->
 
             </div>
