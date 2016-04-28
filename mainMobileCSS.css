@@ -105,11 +105,8 @@ body {
       margin-top: 10px;
 }
 
-#social_media {
+.Logo {
+    width: 75px;
     float: left;
-    position: relative;
-    display: block;
-    margin: auto;
-    width: 50%;
-    Height: auto;
 }
+
