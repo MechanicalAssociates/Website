@@ -13,7 +13,12 @@
       <script type="text/javascript" src="javaScript/jquery.qtip.js"></script>
       <script type="text/javascript" src="javaScript/jquery.qtip.min.js"></script>
       <script type="text/javascript" src="javaScript/states.js"></script>
-    <script type="text/javascript">
+
+       <!-- Google+ -->
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+      <!-- MORE SCRIPT -->
+      <script type="text/javascript">
       // mobile call
           <!--
           if (screen.width <= 699) {
@@ -79,30 +84,24 @@
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             <div class="fb-page" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
       </div>
-        <div class="content" style="position: relative; height: 350px;">
-            <h1>Contact Us</h1>
+        <div class="content" style="position: relative; height: auto;">
+          <h1>Contact Us</h1>
             <hr>
-            <div style="text-align: center; position: relative; margin: auto; border-left: 100px; padding-top: 50px;">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px; padding-right: 85px;"></img><p>
-              <b>Mechanical Associates</b><br/>
-              745 Broadway Street<br/>
-              Fresno, CA 93721<br/>
-              <i>phone: 559-272-8157</i><br/>
-              <i>email: sales@mechanical-associates.com</i><p>
-            </div>
-
-          <!-- <div id="ContactForm">
-            <form action="<?php $PHP_SELF ?>" name="feedbackForm" method="post" id="feedbackForm" style="float: left; padding-left: 45px; margin: auto; padding-right: 175px; border-right: 2px solid #0E7DC2;">
+          <table width="auto"; height="auto";>
+            <tbody>
+              <tr>
+                <td><div id="ContactForm">
+            <form action="send_form_email.php" name="feedbackForm" method="post" id="feedbackForm" style="float: left; padding-left: 45px; margin: auto; padding-right: 175px; border-right: 2px solid #0E7DC2;">
                 <input type="hidden" name="Alavar" value="login"></input>
                 <b><u style="color: #b30000;">A field marked with (*) is required</u></b>
 
               <p><label for="full_name">*Full Name: </label><br/>
-              <input type="text" size="10" name="full_name" value="<?php echo $_POST["full_name"]; ?>" ></input>
-                <?php if(isset($errFullName)) echo $errFullName; ?><p>
+              <input type="text" size="10" name="full_name" ></input>
+              <p>
 
               <label for="email_address">*Email Address:</label><br/>
-              <input type="text" size="10" name="email_address" value="<?php echo $_POST["email"]; ?>"></input>
-                <?php if(isset($errEmail)) echo$errEmail; ?><p>
+              <input type="text" size="10" name="email_address"></input>
+              <p>
 
               <label for="foundWebsite">How did you find us?</label><br/>
                 <select name="wordOfMouth">
@@ -116,18 +115,27 @@
                 </select><p>
 
               <label for="feedback_area">*Feedback (Comments, Questions, etc.):</label><br/>
-              <textarea name="comments" rows="5" cols="50" name="feedback_area"><?php echo $_POST["comments"]; ?></textarea>
-                <?php if(isset($errFeedback)) echo $errMessage; ?><p>
+              <textarea name="comments" rows="5" cols="50" name="feedback_area"></textarea>
+              <p>
 
               <input type="submit" value="Submit" name="submit"></input><p></p>
 
             </form>
-          </div> -->
-        <div id="content_mini" style="position: relative; height: 50px;">
-            <p>
+          </div></td>
+                <td><div style="text-align: center; position: relative; margin: auto; border-left: 100px; padding-top: 30px;">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px; padding-right: 85px;"></img><p>
+              <b>Mechanical Associates</b><br/>
+              745 Broadway Street<br/>
+              Fresno, CA 93721<br/>
+              <i>phone: 559-272-8157</i><br/>
+              <i>email: sales@mechanical-associates.com</i><p>
+            </div></td>
+              </tr>
+            </tbody>
+          </table>
+            <p style="text-align: center;">
               <b>Or contact your local representative!</b>
             </p>
-        </div>
       </div>
 
          <div class="content" style="background-color: rgba(53, 87, 109, 0.7);">
@@ -213,7 +221,7 @@
                 <!-- Facebook -->
                     <div class="fb-like" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677/" data-width="100" data-layout="button" data-action="like" data-show-faces="true" data-share="true" style="padding-left: 15px;"></div>
                 <!-- Google+ -->
-
+                    <div class="g-plusone" data-annotation="inline" data-width="300"></div>
                 <!-- Instagram -->
 
                 <!-- LinkedIn -->

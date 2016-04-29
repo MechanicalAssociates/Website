@@ -73,7 +73,7 @@ html, body {
 }
 
 .links a:hover {
-    background:#0E7DC2;
+       background: #0E7DC2;
 }
 
 .actualnavigation {
@@ -115,7 +115,6 @@ html, body {
       background-color: #FFFFFF;
       width: 67%;
       margin-left: 70px;
-      border-radius: 5px;
       padding-top: 25px;
       padding-left: 45px;
       padding-right: 45px;
