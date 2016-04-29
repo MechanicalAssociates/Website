@@ -129,19 +129,6 @@ li {
   list-style-position: inside;
 }
 
-#content_mini {
-      margin: auto;
-      width: 67%;
-      border-radius: 5px;
-      padding-top: 10px;
-      padding-left: 25px;
-      padding-right: 45px;
-      padding-bottom: 5px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-}
-
  #testimonials
  {
    margin: auto;
