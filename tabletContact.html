@@ -44,8 +44,42 @@
       <div id="content">
             <h2>Contact Us</h2>
             <hr>
+        <p>
+            <div id="ContactForm">
+                <form name="feedbackForm" method="post" id="feedbackForm" action="feedbackForm.php" style="float: left; padding-left: 45px; margin: auto;">
+                <input type="hidden" name="Alavar" value="login"></input>
+                <b><u style="color: #b30000;">A field marked with (*) is required</u></b>
+
+              <p><label for="full_name">*Full Name: </label><br/>
+              <input type="text" size="10" name="full_name" ></input>
+              <p>
+
+              <label for="email_address">*Email Address:</label><br/>
+              <input type="text" size="10" name="email_address"></input>
+              <p>
+
+              <label for="foundWebsite">How did you find us?</label><br/>
+                <select name="wordOfMouth">
+                  <option selected="">-- Please Select --</option>
+                  <option>Google/Google+</option>
+                  <option>Facebook</option>
+                  <option>LinkedIn</option>
+                  <option>Twitter</option>
+                  <option>Representative</option>
+                  <option>Other</option>
+                </select><p>
+
+              <label for="Feedback">*Feedback (Comments, Questions, etc.):</label><br/>
+              <textarea rows="5" cols="50" name="feedback_area"></textarea>
+              <p>
+
+              <input type="submit" value="Send" name="submit"></input><p></p>
+
+            </form>
+          </div>
           <div style="text-align: left;">
             <hr>
+            <p>
               <center>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="PictureRefs/MA-Logo-Full_Color.png" style="width: 300px;"></img><p>
               <b>Mechanical Associates</b><br/>
               745 Broadway Street<br/>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Get a quote! | Mechanical Associates</title>
+
+    <!-- CSS stuff -->
+    <link type="text/css" rel="stylesheet" href="MainCSS.css">
+
+     <!-- JavaScript Code -->
+     <script src="javaScript/jquery-1.10.2.min.js"></script>
+     <script type="text/javascript" src="javaScript/jquery.min.js"></script>
+     <script type="text/javascript" src="javaScript/validation.js"></script>
+
+     <script type="text/javascript">
+
+       // Hide/Show Gate Types
+          function toggle(rowtoshow,totalrows)
+     {
+         //first hide all rows
+         for (i=1;i<totalrows+1;i++)
+         {
+        eval("document.getElementById(\"gate"+i+"\").style.display='none'");
+        }
+         //now see which row to show
+         if (rowtoshow!="") {
+             obj=document.getElementById("gate"+rowtoshow);
+             obj.style.display='';
+             }
+     }
+
+       // Hide/Show Gate Shape
+           function toggleShape(rowtoshow,totalrows)
+     {
+         //first hide all rows
+         for (i=1;i<totalrows+1;i++)
+         {
+        eval("document.getElementById(\"shape"+i+"\").style.display='none'");
+        }
+         //now see which row to show
+         if (rowtoshow!="") {
+             obj=document.getElementById("shape"+rowtoshow);
+             obj.style.display='';
+             }
+     }
+
+       // Hide/Show Hoist Type
+         function hoist(obj) {
+            var hoisting = document.getElementById('hoistType')
+            hoisting.style.display = (obj.id == 'manual') ? '' : 'none';
+         }
+
+    </script>
+  </head>
+
+<!-- TO-DO LIST
+  - Create database / php page
+    - Database for contacts, customers, representatives
+    - Javascript validation script <----------------------- (TO-DO)
+
+  - Develop mini-navigation <----------------------- (TO-DO)
+    - Fix current navigation with drop-down menus
+
+  - Splash page
+
+  - Social media buttons <----------------------- (TO-DO)
+    - Get social media accounts for company
+    - MAINTAIN SOCIAL MEDIA ACCOUNTS CAUSE NO ONE ELSE WILL
+    - Find ways to interact with world while staying relative to business
+
+  - Media page <----------------------- (TO-DO)
+    - Updated training videos
+    - Updated gallery
+    - Introduction video :D PEOPLE ARE GONNA SHOW THEIR FACES AAAAAAAAAAAAAAAAAAAAAAAAA
+
+  - Main site news (Main page)
+    - Information about site visits?
+
+  - MORE INFO ON ABOUT PAGE
+    - PICTURES ON ABOUT PAGE
+
+  - Clean to-do list
+  -->
+
+<body>
+      <!-- JavaScript Body code -->
+      <div id="fb-root"></div>
+<script>
+  // Facebook JS code
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<!-- Start up the actual body stuff cause OH MY GOD ALL THIS CODE -->
+    <section id="header">
+        <div id="header_navigation">
+            <span class="company_logo">
+                <a href="Index.html" title="Mechanical Associates"><img src="PictureRefs/MechanicalAssociates_Logo1.png" height="70px";></img></a>
+            </span>
+            <span class="links">
+                <ul class="actualnavigation">
+                    <a href="Index.html" title="Home" alt="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="AboutUs.html" title="About Us" alt="About Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="Products.html" title="Products" alt="Products">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="TrainingVideos.html" title="Videos" alt="Training Videos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="ContactUs.html" title="Contact Us" alt="Contact Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </ul>
+            </span>
+        </div>
+    </section>
+
+    <section id="main_content">
+        <div id="banner">
+            <img src="PictureRefs/DSC_0016.png"></img>
+        </div>
+        <div class="content">
+            <h1>Get a Quote!</h1>
+          <hr>
+            <form id="validGate" method="POST" onsubmit="return validating(this);">
+              <table width="730" style="margin: auto";>
+                <tbody>
+                  <tr>
+                    <td colspan="2" style="text-align: center"><b>NOTE:</b> Fields marked with an asterisk (*) is required.<p></td>
+                  </tr>
+                  <tr>
+                    <td align="right"></td>
+                    <td><b>Information: </b></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="fullName"><b>*</b>Full Name:</label></td>
+                    <td><input name="fullName" title="Full Name" size="40" input="text" id="fullName"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Title:</td>
+                    <td><input name="Title" title="Title" size="40" input="text" id="title"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="Company"><b>*</b>Company:</label></td>
+                    <td><input name="Company" title="Company" size="40" input="text" id="Company"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="Address1"><b>*</b>Address:</label></td>
+                    <td><input name="Address1" title="Address" size="40" input="text" id="Address1"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="City"><b>*</b>City:</label></td>
+                    <td><input name="City" title="City" size="40" input="text" id="City"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="stateProvinces"><b>*</b>State/Provinces:</label></td>
+                    <td><input name="stateProvinces" title="State/Provinces" size="40" input="text" id="State"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Country:</td>
+                    <td><input name="Country" title="Country" size="40" input="text"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="ZIPPostalCode"><b>*</b>ZIP/Postal Code:</label></td>
+                    <td><input name="ZIPPostalCode" size="40" input="text" id="ZIP"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="Phone"><b>*</b>Phone:</label></td>
+                    <td><input name="Phone" size="40" input="text" id="phone"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><label for="Fax">Fax:</label></td>
+                    <td><input name="Fax" size="40" input="text"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>*</b>Email:</td>
+                    <td><input name="Email" size="40" input="text" id="email"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Quote due date:</td>
+                    <td><input id="quoteDue" size="40" input="text" id="quoteDue"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right"></td>
+                    <td><b>Operation & Frame Options</b></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>*</b>Number of Gates Required: </td>
+                    <td><input id="gateNumReq" size="40" maxlength="3" input="text"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>*</b>Gate Material: </td>
+                    <td><form action="">
+                          <input type="radio" name="material" value="aluminum" id="aluminum"> Aluminum &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="material" value="stainlessSteel" id="stainlessSteel"> Stainless Steel</input>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>*</b>Gate Type:</td>
+                    <td><select id="gateType" onchange="toggle(this.value,7)">
+                        <option selected="" value="0">Please Select a Gate Type</option>
+                        <option value="1">Steel Slide</option>
+                        <option value="2">Weir Gate</option>
+                        <option value="3">Stop Gate</option>
+                        <option value="4">Bulkhead</option>
+                        <option value="5">Stop Log</option>
+                        <option value="6">Flap Gate</option>
+                        <option value="7">Mud Valve</option>
+                      </select></td>
+                  </tr>
+                  <tr id="gate1" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="gate2" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="gate3" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="gate4" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="gate5" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="gate6" style="display: none;">
+                    <td align="right"><b>*</b>Gate Shape:</td>
+                    <td><select id="gateShape" onchange="toggleShape(this.value,2)">
+                        <option selected="">Please Select a Gate Shape</option>
+                        <option value="1">Square</option>
+                        <option value="2">Circle</option>
+                      </select></td>
+                  </tr>
+                  <tr id="gate7" style="display: none;" onchange="toggle(this)">
+                    <td align="right"><b>*</b>Gate Diameter: </td>
+                    <td><input id="gateDiameter" size="4" maxlength="3" input="text"></input> &deg;</td>
+                  </tr>
+
+                  <tr id="shape1" style="display: none;" onchange="toggleShape(this)">
+                    <td align="right"><b>*</b>Gate Size:</td>
+                    <td><input class="gateWidth" size="4" maxlength="5" input="text"></input> Width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="gateHeight" size="4" maxlength="5" input="text"></input> Height
+                    </td>
+                  </tr>
+                  <tr id="shape2" style="display: none;" onchange="toggleShape(this)">
+                    <td align="right"><b>*</b>Gate Diameter: </td>
+                    <td><input id="gateDiameter" size="4" maxlength="3" input="text"></input> &deg;</td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Hoist Requirements: </td>
+                    <td><form action="">
+                          <input type="radio" name="handling" id="manual" onclick="hoist(this)"> Manual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="handling" id="electric" onclick="hoist(this)"> Electric</input>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr id="hoistType" style="display: none;">
+                    <td align="right">Hoist Type: </td>
+                    <td><form action="">
+                          <input type="radio" name="hoist" id="handwheel"> Handwheel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="hoist" id="gearbox"> 90&deg; Gearbox</input>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Stem Cover: </td>
+                    <td><form action="">
+                          <input type="radio" name="cover" id="clearPlastic"> Clear Plastic &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="cover" id="metal"> Metal</input>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">Type of Stem: </td>
+                    <td><form action="">
+                          <input type="radio" name="cover" id="RisingStem">Rising Stem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="cover" id="nonRisingStem">Non-Rising Stem &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="cover" id="downwardOpening">Downward Opening (Weir)</input>
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right"></td>
+                    <td><b>Gate Design Requirements: </b></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" style="text-align: center;"><img src="PictureRefs/GateDesignRequirements.png" style="align: center;"></img><p></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Operating Floor Elevation:</td>
+                    <td><input name="operatingFloorElevation" size="40" input="text" id="OFE"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Inv. to Oper Fl.:</td>
+                    <td><input name="invToOperFl" size="40" input="text" id="inOpFl"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Invert Elevation:</td>
+                    <td><input name="invertElevation" size="40" input="text" id="IE"></input></td> <!-- LMAO INTERNET EXPLORER -->
+                  </tr>
+                  <tr>
+                    <td align="right">Operating Seating Head:</td>
+                    <td><input name="operatingSeatingHead" size="40" input="text" id="OSH"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Operating Unseating Head:</td>
+                    <td><input name="operatingUnseatingHead" size="40" input="text" id="OUH"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr>
+                    <td align="right">Gate Mounting Type: </td>
+                    <td><form action="">
+                          <input type="radio" name="misc" id="channelMount">Channel Mount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="misc" id="wallMount">Wall Mount</input><br/>
+                          <input type="radio" name="misc" id="weir">Weir (Downward Opening) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="misc" id="jBulb">J Bulb Seals</input><br/>
+                          <input type="radio" name="misc" id="UHMW">UHMW Bearing Strips  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+                          <input type="radio" name="misc" id="GG">Groutless Gasket</input> <!-- LMAO GG, MECHANICAL ASSOCIATES, GG -->
+                        </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">Design Head:<br/> (Different than operating <br/>head indicated)</td>
+                    <td>Seating: <input name="differentSeating" size="10" input="text" id="diffSeat"></input> / Unseating: <input name="differentUnseating" size="10" input="text" id="diffUnseat"></input></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr colspan="2">
+                    <td align="right"><p>
+                      </p></td>
+                    <td><b>Comments/Suggestions/Etc.</b><br/>
+                      <textarea name="comments" rows="5" cols="50"></textarea>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                  <tr colspan="2">
+                    <td align="right"><p>
+                      </p></td>
+                    <td><button type="submit" value="Submit">Submit</input> <button type="reset" value="Reset">Clear</button></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><p>
+                      </p></td>
+                    <td><p>
+                      </p></td>
+                  </tr>
+                </tbody>
+            </table>
+          </form>
+        </div>
+
+        <div id="footer">
+            <span class="footer_links">
+                <ul class="footer_navigation">
+                    <a href="Index.html" title="Home" alt="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="AboutUs.html" title="About Us" alt="About Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="Products.html" title="Products" alt="Products">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="TrainingVideos.html" title="Videos" alt="Training Videos">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Videos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="ContactUs.html" title="Contact Us" alt="Contact Us">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </ul>
+            </span>
+            <div id="social_media">
+                <!-- Facebook -->
+                    <div class="fb-like" data-href="https://www.facebook.com/Mechanical-Associates-818192508251677/" data-width="100" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                <!-- Google+ -->
+
+                <!-- Instagram -->
+
+                <!-- LinkedIn -->
+
+                <!-- Twitter -->
+
+                <!-- YouTube -->
+
+            </div>
+            <div id="Logo_Only">
+                <div class="Logo" style="text-align: right; padding-right: 25px;">
+                    <img src="PictureRefs/LOGOONLY.png" width="85"; height="50";></img><br/>
+                </div>
+            </div>
+            <div class="copyright" style="text-align: right; width: 100%; margin: auto;">
+                    Copyright &copy; 2013 Mechanical Associates<br/>
+                    All Rights Reserved.
+                </div>
+        </div>
+    </section>
+
+  </body>
+</html>
